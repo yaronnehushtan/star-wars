@@ -1,0 +1,31 @@
+.BarChart{
+  width: 800px;
+  height: 600px;
+  //border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  Margin: 50px auto;
+  padding: 10px 20px 30px;
+  background: #FFF;
+  box-shadow: 0 3px 5px rgba(0,0,0,0.2);
+
+  .chart-container{
+    height: 550px;
+    display: flex;
+    justify-content: space-around;
+
+  }
+
+  #chart-container::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 240px;
+    height: 30px;
+    left: 155px;
+    top: 254px;
+    background: #FAFAFA;
+    box-shadow: 1px 1px 0 0 #DDD;
+  }
+}

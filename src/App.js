@@ -1,23 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.scss';
+import BarChart from "./BarChart/BarChart";
+import HashTables from "./HashTables/HashTables";
+import {useState} from "react";
+
 
 function App() {
+    const [isFirstPart, setIsFirstPart] = useState(true)
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <h3 className="title">{ isFirstPart ? 'Part 1' : 'Part 2'}</h3>
+        <button className="parts-button" onClick={()=>{setIsFirstPart(!isFirstPart)}} >{ isFirstPart ? 'To Part 2' : 'To Part 1'}</button>
+        { isFirstPart && <HashTables />}
+        { !isFirstPart && <BarChart />}
     </div>
   );
 }

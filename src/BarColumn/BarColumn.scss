@@ -1,0 +1,11 @@
+.BarColumn{
+  width: 60%;
+  background-color: #6495ed;
+  border-radius: 4px 4px 2px 0;
+  animation-name: bar-grow;
+  animation-duration: 1s;
+}
+
+@keyframes bar-grow {
+  from {height: 0px}
+}
